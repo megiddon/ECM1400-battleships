@@ -1,0 +1,288 @@
+2023-12-09 04:00:09 INFO attempting to load /placement URL
+2023-12-09 04:00:15 INFO ship data successfully sent
+2023-12-09 04:00:16 INFO attempting to load /placement URL
+2023-12-09 04:01:03 INFO game over - Player wins
+2023-12-09 04:02:36 INFO app run
+2023-12-09 04:02:38 INFO attempting to load /placement URL
+2023-12-09 04:02:44 INFO ship data successfully sent
+2023-12-09 04:02:44 INFO attempting to load /placement URL
+2023-12-09 04:03:21 INFO game over - AI Wins
+2023-12-09 04:06:36 INFO app run
+2023-12-09 04:06:44 INFO attempting to load placement page
+2023-12-09 04:06:51 INFO attempting to load placement page
+2023-12-09 04:06:57 INFO ship data successfully sent
+2023-12-09 04:06:58 INFO attempting to load main game
+2023-12-09 04:07:04 INFO ship data successfully sent
+2023-12-09 04:07:04 INFO attempting to load main game
+2023-12-09 04:07:11 INFO game over - AI Wins
+2023-12-09 04:07:22 INFO game over - AI Wins
+2023-12-09 04:10:50 INFO app run
+2023-12-09 04:10:59 INFO attempting to load placement page
+2023-12-09 04:11:00 INFO id 84a7a8f8-e907-4081-97c5-d956073df27f: send game used while not all ships placed
+2023-12-09 04:12:50 INFO app run
+2023-12-09 04:12:57 INFO id 3bbebf2c-9649-11ee-846f-b0fc36d02836:attempting to load placement page
+2023-12-09 04:12:59 INFO id 3bbebf2c-9649-11ee-846f-b0fc36d02836:ship data successfully sent
+2023-12-09 04:13:00 INFO id 3bbebf2c-9649-11ee-846f-b0fc36d02836:attempting to load main game
+2023-12-09 04:13:09 INFO id 3bbebf2c-9649-11ee-846f-b0fc36d02836:game over - AI Wins
+2023-12-10 06:38:39 INFO app run
+2023-12-10 07:48:25 INFO app run
+2023-12-10 07:51:23 INFO app run
+2023-12-10 07:51:31 INFO id eed5ce71-9730-11ee-bfb9-b0fc36d02836:attempting to load placement page
+2023-12-10 07:51:40 INFO id eed5ce71-9730-11ee-bfb9-b0fc36d02836:ship data successfully sent
+2023-12-10 07:51:42 INFO id eed5ce71-9730-11ee-bfb9-b0fc36d02836:attempting to load main game
+2023-12-10 07:52:22 INFO id eed5ce71-9730-11ee-bfb9-b0fc36d02836:game over - AI Wins
+2023-12-11 21:26:23 INFO app run
+2023-12-11 21:26:39 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:attempting to load placement page
+2023-12-11 21:26:52 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:ship data successfully sent
+2023-12-11 21:26:53 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:attempting to load main game
+2023-12-11 21:27:38 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:00 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:01 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:03 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:04 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:06 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:07 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:08 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:10 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:11 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:12 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:13 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:14 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:16 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:17 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:19 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:21 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:23 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:24 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:25 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:39:27 INFO id f87ee865-986b-11ee-98a0-b0fc36d02836:game over - AI Wins
+2023-12-11 21:40:36 INFO app run
+2023-12-11 21:40:46 ERROR config.json contains invalid JSON data!
+2023-12-11 21:40:59 ERROR Exception on /placement [GET]
+Traceback (most recent call last):
+  File "C:\Users\Adam Pennington\Desktop\battleships\components.py", line 83, in get_json_data
+    file = open(filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'config.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Adam Pennington\Desktop\battleships\main.py", line 93, in placement_interface
+    config_data = get_json_data("config.json")
+  File "C:\Users\Adam Pennington\Desktop\battleships\components.py", line 89, in get_json_data
+    await_exit()
+  File "C:\Users\Adam Pennington\Desktop\battleships\components.py", line 32, in await_exit
+    sys.quit()
+AttributeError: module 'sys' has no attribute 'quit'
+2023-12-11 21:42:22 INFO app run
+2023-12-11 21:42:33 ERROR config.json does not exist!
+2023-12-11 21:42:33 ERROR Exception on /placement [GET]
+Traceback (most recent call last):
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Adam Pennington\Desktop\battleships\main.py", line 99, in placement_interface
+    session["difficulty"] = config_data["difficulty"]
+TypeError: 'NoneType' object is not subscriptable
+2023-12-11 21:43:53 ERROR config.json does not exist!
+2023-12-11 21:46:00 INFO app run
+2023-12-11 21:46:02 ERROR config.json does not exist!
+2023-12-11 21:46:02 ERROR Exception on /placement [GET]
+Traceback (most recent call last):
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Adam Pennington\Desktop\battleships\main.py", line 99, in placement_interface
+    #Not cryptographically secure but it doesn't
+TypeError: 'NoneType' object is not subscriptable
+2023-12-11 21:46:34 INFO app run
+2023-12-11 21:46:36 ERROR config.json does not exist!
+2023-12-11 21:46:36 ERROR Exception on /placement [GET]
+Traceback (most recent call last):
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Adam Pennington\Desktop\battleships\main.py", line 99, in placement_interface
+    #Generates a unique ID for a session for identification in the log.
+TypeError: 'NoneType' object is not subscriptable
+2023-12-11 21:48:14 ERROR config.json does not exist!
+2023-12-11 21:48:32 ERROR config.json does not exist!
+2023-12-11 21:48:58 INFO app run
+2023-12-11 21:49:02 ERROR config.json does not exist!
+2023-12-11 21:49:02 ERROR Exception on /placement [GET]
+Traceback (most recent call last):
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Adam Pennington\Desktop\battleships\main.py", line 99, in placement_interface
+TypeError: 'NoneType' object is not subscriptable
+2023-12-11 21:50:30 INFO app run
+2023-12-11 21:50:35 ERROR config.json does not exist!
+2023-12-11 21:50:35 INFO id 50b249ca-986f-11ee-88fa-b0fc36d02836:attempting to load placement page
+2023-12-11 21:50:39 INFO id 50b249ca-986f-11ee-88fa-b0fc36d02836:ship data successfully sent
+2023-12-11 21:50:40 INFO id 50b249ca-986f-11ee-88fa-b0fc36d02836:attempting to load main game
+2023-12-11 21:52:20 ERROR placement.json does not exist!
+2023-12-11 21:53:32 ERROR placement.json does not exist!
+2023-12-11 21:53:50 ERROR placement.json does not exist!
+2023-12-11 21:54:06 INFO app run
+2023-12-11 22:33:24 INFO app run
+2023-12-11 22:36:10 INFO app run
+2023-12-11 22:36:21 INFO id b4fb2e9a-9875-11ee-9cd9-b0fc36d02836:attempting to load placement page
+2023-12-11 22:36:25 INFO id b4fb2e9a-9875-11ee-9cd9-b0fc36d02836:ship data successfully sent
+2023-12-11 22:36:25 INFO id b4fb2e9a-9875-11ee-9cd9-b0fc36d02836 :attempting to load main game
+2023-12-11 22:39:39 INFO app run
+2023-12-11 22:39:46 INFO id 2f4722af-9876-11ee-b8cd-b0fc36d02836:attempting to load placement page
+2023-12-11 22:39:49 INFO id 2f4722af-9876-11ee-b8cd-b0fc36d02836: ship data successfully sent
+2023-12-11 22:39:50 INFO id 2f4722af-9876-11ee-b8cd-b0fc36d02836: attempting to load main game
+2023-12-11 22:40:43 INFO game over - Player wins
+2023-12-12 04:16:20 INFO app run
+2023-12-12 04:16:26 INFO id 37d78db9-98a5-11ee-9cee-b0fc36d02836:attempting to load placement page
+2023-12-12 04:16:33 INFO id 37d78db9-98a5-11ee-9cee-b0fc36d02836: ship data successfully sent
+2023-12-12 04:16:35 INFO id 37d78db9-98a5-11ee-9cee-b0fc36d02836: attempting to load main game
+2023-12-12 04:17:53 INFO id 37d78db9-98a5-11ee-9cee-b0fc36d02836: game over - AI Wins
+2023-12-12 04:18:04 INFO id 720cee54-98a5-11ee-80d1-b0fc36d02836:attempting to load placement page
+2023-12-12 04:18:14 INFO id 720cee54-98a5-11ee-80d1-b0fc36d02836: ship data successfully sent
+2023-12-12 04:18:15 INFO id 720cee54-98a5-11ee-80d1-b0fc36d02836: attempting to load main game
+2023-12-12 04:19:02 INFO id 720cee54-98a5-11ee-80d1-b0fc36d02836: game over - AI Wins
+2023-12-12 04:20:09 INFO app run
+2023-12-12 04:20:09 INFO id bcc9f576-98a5-11ee-baed-b0fc36d02836:attempting to load placement page
+2023-12-12 04:20:18 INFO id bcc9f576-98a5-11ee-baed-b0fc36d02836: ship data successfully sent
+2023-12-12 04:20:19 INFO id bcc9f576-98a5-11ee-baed-b0fc36d02836: attempting to load main game
+2023-12-12 04:20:38 INFO id bcc9f576-98a5-11ee-baed-b0fc36d02836: attempting to load main game
+2023-12-12 04:20:41 INFO id cfa55c62-98a5-11ee-9355-b0fc36d02836:attempting to load placement page
+2023-12-12 04:20:51 INFO id cfa55c62-98a5-11ee-9355-b0fc36d02836: ship data successfully sent
+2023-12-12 04:20:52 INFO id cfa55c62-98a5-11ee-9355-b0fc36d02836: attempting to load main game
+2023-12-12 04:21:50 INFO id cfa55c62-98a5-11ee-9355-b0fc36d02836: game over - AI Wins
+2023-12-12 04:30:05 INFO app run
+2023-12-12 22:51:39 INFO app run
+2023-12-12 22:51:52 INFO id 0a4e362b-9941-11ee-a3fc-b0fc36d02836:attempting to load placement page
+2023-12-12 22:51:56 INFO id 0d154b11-9941-11ee-a260-b0fc36d02836:attempting to load placement page
+2023-12-12 22:52:03 INFO id 112f1c9b-9941-11ee-8faf-b0fc36d02836:attempting to load placement page
+2023-12-12 23:44:47 INFO app run
+2023-12-12 23:44:54 INFO id 73310546-9948-11ee-92b9-b0fc36d02836:attempting to load placement page
+2023-12-12 23:44:57 INFO id 73310546-9948-11ee-92b9-b0fc36d02836: ship data successfully sent
+2023-12-12 23:44:57 INFO id 73310546-9948-11ee-92b9-b0fc36d02836: attempting to load main game
+2023-12-12 23:45:29 INFO game over - Player wins
+2023-12-13 05:14:56 INFO app run
+2023-12-13 05:15:49 ERROR Invalid ship placement - ship goes outside of board
+2023-12-13 05:18:50 ERROR Invalid ship placement - ship goes outside of board
+2023-12-13 05:31:40 INFO app run
+2023-12-13 05:31:56 INFO id ee1248ef-9978-11ee-aa87-b0fc36d02836:attempting to load placement page
+2023-12-13 05:32:00 INFO id ee1248ef-9978-11ee-aa87-b0fc36d02836: ship data successfully sent
+2023-12-13 05:32:00 INFO id ee1248ef-9978-11ee-aa87-b0fc36d02836: attempting to load main game
+2023-12-13 05:32:56 INFO id ee1248ef-9978-11ee-aa87-b0fc36d02836: attempting to load main game
+2023-12-13 05:33:02 INFO id 15a8f4fa-9979-11ee-9110-b0fc36d02836:attempting to load placement page
+2023-12-13 05:33:05 INFO id 15a8f4fa-9979-11ee-9110-b0fc36d02836: ship data successfully sent
+2023-12-13 05:33:06 INFO id 15a8f4fa-9979-11ee-9110-b0fc36d02836: attempting to load main game
+2023-12-13 05:33:22 INFO app run
+2023-12-13 05:33:22 INFO id 212d15f2-9979-11ee-924a-b0fc36d02836:attempting to load placement page
+2023-12-13 05:33:27 INFO id 212d15f2-9979-11ee-924a-b0fc36d02836: ship data successfully sent
+2023-12-13 05:33:50 INFO id 324b2084-9979-11ee-8f63-b0fc36d02836:attempting to load placement page
+2023-12-13 05:34:02 INFO app run
+2023-12-13 05:34:03 INFO id 324b2084-9979-11ee-8f63-b0fc36d02836: ship data successfully sent
+2023-12-13 05:34:04 INFO id 324b2084-9979-11ee-8f63-b0fc36d02836: attempting to load main game
+2023-12-13 05:34:24 INFO app run
+2023-12-13 05:34:27 INFO id 485f4a23-9979-11ee-b6bd-b0fc36d02836:attempting to load placement page
+2023-12-13 05:34:30 INFO id 485f4a23-9979-11ee-b6bd-b0fc36d02836: ship data successfully sent
+2023-12-13 05:34:30 INFO id 485f4a23-9979-11ee-b6bd-b0fc36d02836: attempting to load main game
+2023-12-13 05:35:01 INFO app run
+2023-12-13 05:35:05 INFO id 5e8a0452-9979-11ee-a2db-b0fc36d02836:attempting to load placement page
+2023-12-13 05:35:07 INFO id 5e8a0452-9979-11ee-a2db-b0fc36d02836: ship data successfully sent
+2023-12-13 05:35:08 ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Adam Pennington\Videos\battleships\src\main.py", line 126, in root
+    print(request.args.get())
+TypeError: get() missing 1 required positional argument: 'key'
+2023-12-13 05:36:16 INFO app run
+2023-12-13 05:36:27 INFO id 8fbe2b0d-9979-11ee-b25c-b0fc36d02836:attempting to load placement page
+2023-12-13 05:36:29 INFO id 8fbe2b0d-9979-11ee-b25c-b0fc36d02836: ship data successfully sent
+2023-12-13 05:36:30 INFO id 8fbe2b0d-9979-11ee-b25c-b0fc36d02836: attempting to load main game
+2023-12-13 05:36:51 INFO app run
+2023-12-13 05:36:54 INFO id 9f700607-9979-11ee-8fc0-b0fc36d02836:attempting to load placement page
+2023-12-13 05:36:56 INFO id 9f700607-9979-11ee-8fc0-b0fc36d02836: ship data successfully sent
+2023-12-13 05:36:56 ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Adam Pennington\Videos\battleships\src\main.py", line 126, in root
+    print(request.args())
+TypeError: 'ImmutableMultiDict' object is not callable
+2023-12-13 05:37:07 INFO app run
+2023-12-13 05:37:10 INFO id a961fcfb-9979-11ee-b89a-b0fc36d02836:attempting to load placement page
+2023-12-13 05:37:12 INFO id a961fcfb-9979-11ee-b89a-b0fc36d02836: ship data successfully sent
+2023-12-13 05:37:13 INFO id a961fcfb-9979-11ee-b89a-b0fc36d02836: attempting to load main game
+2023-12-13 05:38:18 INFO app run
+2023-12-13 05:38:23 INFO id d4dbf09e-9979-11ee-a782-b0fc36d02836:attempting to load placement page
+2023-12-13 05:38:25 INFO id d4dbf09e-9979-11ee-a782-b0fc36d02836: ship data successfully sent
+2023-12-13 05:38:26 ERROR Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Adam Pennington\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Adam Pennington\Videos\battleships\src\main.py", line 130, in root
+    if request.args == ImmutableMultiDict([]):
+NameError: name 'ImmutableMultiDict' is not defined
+2023-12-13 05:38:52 INFO app run
+2023-12-13 05:38:55 INFO id e7bae768-9979-11ee-9c40-b0fc36d02836:attempting to load placement page
+2023-12-13 05:38:57 INFO id e7bae768-9979-11ee-9c40-b0fc36d02836: ship data successfully sent
+2023-12-13 05:38:58 INFO id e7bae768-9979-11ee-9c40-b0fc36d02836: attempting to load main game
+2023-12-13 05:39:20 INFO app run
+2023-12-13 05:39:23 INFO id f883119f-9979-11ee-87b3-b0fc36d02836:attempting to load placement page
+2023-12-13 05:39:25 INFO id f883119f-9979-11ee-87b3-b0fc36d02836: ship data successfully sent
+2023-12-13 05:39:26 INFO id f883119f-9979-11ee-87b3-b0fc36d02836: attempting to load main game
+2023-12-13 05:41:34 INFO app run
+2023-12-13 05:41:36 INFO id 47f438f3-997a-11ee-8718-b0fc36d02836:attempting to load placement page
+2023-12-13 05:41:40 INFO id 47f438f3-997a-11ee-8718-b0fc36d02836: ship data successfully sent
+2023-12-13 05:41:41 INFO id 47f438f3-997a-11ee-8718-b0fc36d02836: attempting to load main game
+2023-12-13 05:42:58 INFO app run
+2023-12-13 05:43:08 INFO id 7e6b3c09-997a-11ee-93cb-b0fc36d02836:attempting to load placement page
+2023-12-13 05:43:13 INFO id 7e6b3c09-997a-11ee-93cb-b0fc36d02836: ship data successfully sent
+2023-12-13 05:43:13 INFO id 7e6b3c09-997a-11ee-93cb-b0fc36d02836: attempting to load main game
+2023-12-13 05:43:48 INFO id 7e6b3c09-997a-11ee-93cb-b0fc36d02836: game over - AI Wins
