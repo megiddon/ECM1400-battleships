@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "battleships-megidderp"
+version = "0.0.1"
+authors = [
+  { name="megidderp", email="megidderp@outlook.com" },
+]
+description = "An implementation of Battleships in Python with a web-based interface."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU GPL 3.0",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/megidderp/battleships"
+Issues = "https://github.com/megidderp/battleships/issues"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
