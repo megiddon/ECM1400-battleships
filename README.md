@@ -88,11 +88,11 @@ In order to run the tests written for the application:
 - Navigate into the **/src** directory in the command line.
 - Enter the following:
   
-- **GNU/Linux or MacOS** :
+**GNU/Linux or MacOS** :
   
 python3 -pytest
 
-- **Windows**:
+**Windows**:
 
 python -m pytest 
 
@@ -100,36 +100,36 @@ The **pytest** and **pytest-depends** modules must be installed. To do this, ope
 
 GNU/Linux or MacOS:  
 
-_**python3 pip install pytest**
+**python3 pip install pytest**
 
-_**python3 pip install pytest-depends**
+**python3 pip install pytest-depends**
 
 Windows:  
 
-_**python -m pip install pytest**
+**python -m pip install pytest**
 
-_**python -m pip install pytest-depends**
+**python -m pip install pytest-depends**
 
 ## Documentation
 Documentation of each module can be found in the **/docs** folder of the root directory. These are automatically generated using (https://www.sphinx-doc.org/en/master/ "Sphinx"). To remake the documentation using sphinx:
 
--Install the **sphinx** and **sphinx-apidoc** modules. To do this in the command line:
+-Install the **sphinx** and **autodoc** modules. To do this in the command line:
 
 GNU/Linux or MacOS:
 
-_**python3 pip install sphinx**
+**python3 pip install sphinx**
 
-_**python3 pip install sphinx**
+**python3 pip install autodoc**
 
 Windows:
 
-_**python -m pip install sphinx**
+**python -m pip install sphinx**
 
-_**python -m pip install apidoc**
+**python -m pip install autodoc**
 
 -**Optional** - If you are forking this project, you should edit **conf.py** in the **docs** directory, which contains information about the project that is used to generate the documentation.
 
-_**Optional** - If you are adding new files to the program, you should navigate to the **docs** folder in the command line and run the following:
+**Optional** - If you are adding new files to the program, you should navigate to the **docs** folder in the command line and run the following:
 
 **sphinx-apidoc -o ./source ../src**
 
