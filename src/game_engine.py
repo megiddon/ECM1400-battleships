@@ -13,37 +13,42 @@ def attack(coordinates:tuple[int,int],board:list[list[str]],ships:dict[str,int])
 
     '''Carries out an attack on a specific square.
 
-    :param tuple coordinates: The square being attacked.
-    :param list board: The board of the player being attacked.
-    :param dict ships: The ships of the player being attacked.
+    :param coordinates: The square being attacked.
+    :type coordinates: tuple
+    :param board: The board of the player being attacked.
+    :type board: list
+    :param ships: The ships of the player being attacked.
+    :type ships: dict
 
     :return bool:
 
     '''
 
-    row,col = coordinates[0], coordinates[1]
+    row, col = coordinates[0], coordinates[1]
     name:str = board[row][col]
     #If the square contains a ship
     if name:
         ships[name] -= 1
         #Removes ship from square
         board[row][col] = None
-        print('Hit battleship at ' + str(col) + ',' + str(row))
+        print(f'Hit battleship at ({col},{row})!')
         if ships[name] == 0:
-            print('Battleship sunk!')
+            print(f'{name} sunk!')
         return True
-    print('Miss!')
+    print(f'Miss at ({col},{row})!')
     return False
 
 def validate_coords_input(coords:str) -> bool:
 
     '''Validates input with regex.
 
-    :param str coords: the coordinates entered by the user:
-    :return bool: whether the input is valid or not:
+    :param coords: the coordinates entered by the user:
+    :type coords: str
+    :return: whether the input is valid or not:
+    :rtype: bool
 
     '''
-    if re.match('[0-9]+,[0-9]+',coords):
+    if re.fullmatch('[0-9]+,[0-9]+',coords):
         return True
     return False
 
@@ -51,12 +56,13 @@ def cli_coordinates_input() -> tuple[int,int]:
 
     '''Gets a pair of coordinates representing a square from the user.
 
-    :return tuple: The square entered by the user.
+    :return: The square entered by the user.
+    :rtype: tuple
 
     '''
     #Loops until a valid response is received from the user.
     while True:
-        coords = input('Please enter a pair of coordinates in the format x,y. ')
+        coords:str = input('Please enter a pair of coordinates in the format x,y. ')
         if validate_coords_input(coords):
             #Parses coordinates into integer values
             coords = coords.split(',')
@@ -65,8 +71,10 @@ def cli_coordinates_input() -> tuple[int,int]:
 def wintest(ships:dict[str,int]) -> bool:
     '''Checks if all of a player's ships have been sunk.
 
-    :param ships dict: The player's ships.
-    :return bool: Whether the player has no ships remaining or not.
+    :param ships: The player's ships.
+    :type ships: dict
+    :return: Whether the player has no ships remaining or not.
+    :rtype: bool
 
     '''
     for i in ships.values():
@@ -84,6 +92,7 @@ def simple_game_loop() -> None:
     board = initialise_board()
     ships = create_battleships()
     board = place_battleships(board,ships,'simple')
+    #Loops until player has won.
     while not wintest(ships):
         print_board(board)
         coords = cli_coordinates_input()
