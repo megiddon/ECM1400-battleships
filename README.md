@@ -153,7 +153,7 @@ Windows:
 
 Navigate to the **docs** folder in the command line and run **make html**
 
-Note that the documentation is automatically generated based off the docstrings in each module. Docstrings must be structured in (https://peps.python.org/pep-0287/ reST)) format. More information on this can be found [here](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html).
+Note that the documentation is automatically generated based off the docstrings in each module. Docstrings must be structured in [reST](https://peps.python.org/pep-0287) format. More information on this can be found [here](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html).
 
 ## License
 
