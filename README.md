@@ -22,13 +22,13 @@ GNU/Linux or MacOS:
 
 ***python3 pip install flask***
 
-***python3 pip install flask_session***
+***python3 pip install flask-session***
 
 Windows:
 
 ***python -m pip install flask***
 
-***python -m pip install flask_session***
+***python -m pip install flask-session***
 
 To play through the command line interface:
 - Run **src/mp_game_engine.py**.
