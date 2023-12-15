@@ -4,13 +4,14 @@ Copyright megiddon 2023
 
 Made for the ECM1400 Programming module.
 
+# Self Assessment
 ## Features Implemented
 - Core gameplay as detailed in specification
-- Adjustable difficulty implemented through config file. Set to "easy" by default, which is the basic behaviour given in the specification.
+- Adjustable difficulty implemented through config file. Set to "easy" by default, which implements the basic behaviour given in the specification. Difficulty is implemented through greater sophistication in the AI's guessing method.
 - Adjustable board size implemented through config file. Size is set to 10 by default.
 - Various quality-of-life additions for the flask interface.
 - Series of unit tests written in test_custom.py.
-  
+
 ## Overview
 This program is an implementation of the classic two-player game Battleships in python. The game can be played both in a command-line interface and a web-based interface built with the Flask module.
 
@@ -96,7 +97,7 @@ To change the size of the board, replace the number **10** with a positive integ
 ## Testing
 
 In order to run the tests written for the application:
-- Navigate into the **/src** directory in the command line.
+- Navigate into the **/src** directory in the command line. It is **mandatory** that you cd into the **/src** directory. Pytest will not have the correct scope otherwise!
 - Enter the following:
   
 **GNU/Linux or MacOS** :
@@ -125,6 +126,7 @@ Windows:
 ## Logging
 
 The program keeps a devlog. This can be found at **/src/gamelog.log** and is openable in a text editor.
+
 ## Documentation
 Documentation of each module can be found in the **/docs** folder of the root directory. These are automatically generated using [Sphinx](https://www.sphinx-doc.org/en/master/). 
 To open the documentation, navigate to **/docs/build/html/** and open **index.html** in a browser. In the future the documentation will be pushed to ReadTheDocs and this section will be updated accordingly.
@@ -165,6 +167,11 @@ Windows:
 Navigate to the **docs** folder in the command line and run **make html**
 
 Note that the documentation is automatically generated based off the docstrings in each module. Docstrings must be structured in [reST](https://peps.python.org/pep-0287) format. More information on this can be found [here](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html).
+
+
+## Known issues
+
+Running pytest seems to cause a test report file **test_report.txt** to be generated in multiple directories. This is most likely due to a scoping issue as the **/src** directory needs to be added to **sys.PATH** for pytest to run. Scoping in general 
 
 ## License
 
