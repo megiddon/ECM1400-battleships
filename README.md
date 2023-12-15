@@ -96,9 +96,11 @@ python -m pytest
 The **pytest** and **pytest-depends** modules must be installed. To do this, open the terminal and enter the folllowing:
 
 GNU/Linux or MacOS:  
-_**python3 pip install pytest**_  
+_**python3 pip install pytest**
+_**python3 pip install pytest-depends**
 Windows:  
-_**python -m pip install pytest**_  
+_**python -m pip install pytest**
+_**python -m pip install pytest-depends**
 
 ## License
 
