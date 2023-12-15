@@ -20,11 +20,13 @@ This can be found at https://www.python.org/downloads/.
 GNU/Linux or MacOS:
 
 ***python3 pip install flask***
+
 ***python3 pip install flask_session***
 
 Windows:
 
 ***python -m pip install flask***
+
 ***python -m pip install flask_session***
 
 To play through the command line interface:
@@ -46,9 +48,13 @@ To play through the web-based interface:
 
 To do this through the command line:
 - Navigate to **/src** from the **root** directory.
+- 
 GNU/Linux or MacOS:
+
 ***python3 main.py***
+
 Windows:
+
 ***python main.py***
 
 - Navigate to **127.0.0.1:5000/placement** in a web browser (note: javascript is required for the game to run).
@@ -82,7 +88,7 @@ python3 -pytest
 - **Windows**:
 python -m pytest 
 
-The **pytest** module must be installed. To do this, open the terminal and enter the folllowing:
+The **pytest** and **pytest-depends** modules must be installed. To do this, open the terminal and enter the folllowing:
 
 GNU/Linux or MacOS:  
 _**python3 pip install pytest**_  
