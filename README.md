@@ -121,6 +121,10 @@ Windows:
 
 **python -m pip install pytest-depends**
 
+
+## Logging
+
+The program keeps a devlog. This can be found at **/src/gamelog.log** and is openable in a text editor.
 ## Documentation
 Documentation of each module can be found in the **/docs** folder of the root directory. These are automatically generated using [Sphinx](https://www.sphinx-doc.org/en/master/). 
 To open the documentation, navigate to **/docs/build/html/** and open **index.html** in a browser. In the future the documentation will be pushed to ReadTheDocs and this section will be updated accordingly.
