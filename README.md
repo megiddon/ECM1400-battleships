@@ -73,7 +73,7 @@ Windows:
 The battleships in the game can be changed through the file **battleships.txt**
 - Open **/src/battleships.txt** in a text editor.
 - Add a new line for each battleship.
-- Write to the line in the format **name**:**length**. For example, an Aircraft Carrier with length 5 would be written as **Aircraft_Carrier:5**, or a Nuclear Submarine with length 2 would be written as **Nuclear_Sumbarine:3**. Note that quotes are not required for the name of the ship or the length and underscores should be used to separate words.
+- Write to the line in the format **name**:**length**. For example, an Aircraft Carrier with length 5 would be written as **Aircraft_Carrier:5**, or a Nuclear Submarine with length 2 would be written as **Nuclear_Submarine:3**. Note that quotes are not required for the name of the ship or the length and underscores should be used to separate words.
 
 ## Changing difficulty and board size
 
