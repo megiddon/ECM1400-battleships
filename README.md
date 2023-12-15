@@ -8,7 +8,7 @@ Made for the ECM1400 Programming module.
 - Core gameplay as detailed in specification
 - Adjustable difficulty implemented through config file. Set to "easy" by default, which is the basic behaviour given in the specification.
 - Adjustable board size implemented through config file. Size is set to 10 by default.
-- Various quality-of-life fixes for the flask code.
+- Various quality-of-life additions for the flask interface.
 - Series of unit tests written in test_custom.py.
   
 ## Overview
