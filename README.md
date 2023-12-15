@@ -61,6 +61,9 @@ Windows:
 - Navigate to **127.0.0.1:5000/placement** in a web browser (note: javascript is required for the game to run).
 - Once the game is over you must re-enter the above URL in order to play again.
 
+
+# User Manual 
+
 ## Configuration
 
 The game's difficulty as well as the size of the game board can be configured.
