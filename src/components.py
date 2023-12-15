@@ -1,4 +1,4 @@
-#Copyright (C) 2023 Adam Pennington
+#Copyright (C) 2023 megiddon
 #This program is licensed under the GNU GPL 3.0 or later.
 #This is contained in full in the file LICENSE.txt
 
@@ -25,7 +25,7 @@ logging.basicConfig(encoding='utf-8',
                     datefmt='%Y-%m-%d %H:%M:%S')
 
 def get_default_ships() -> dict[str,int]:
-    
+
     return {'Aircraft_Carrier': 5, 'Battleship': 4, 'Cruiser': 3,
                              'Submarine': 3, 'Destroyer': 2}
 def await_exit() -> None:
@@ -39,9 +39,14 @@ def validate_square(square:tuple[int,int],size:int) -> bool:
 
     '''Checks that a square falls within the boundaries of the board
 
-    :param tuple square: the square to be checked.
-    :param int size: the size of the board.
-    :return bool: whether the square is valid or not
+    :param square: the square to be checked.
+    :type square: tuple
+
+    :param size: the size of the board.
+    :type size: int (should be > 0)
+
+    :return: whether the square is valid or not
+    :rtype: bool
 
     '''
 
@@ -56,18 +61,20 @@ def print_board(board:list[list[str]]) -> None:
 
     '''Prints out the board to the console. Not used in the web-based game.
 
-    :param list board: a list of lists representing a board.
-    :return none:
+    :param board: a list of lists representing a board.
+    :type board: list
+
+    :return None
 
     '''
 
     outputstring = '||'
     for i in range(len(board)):
-        outputstring += str(i)
+        outputstring += str(i)[-1]
     outputstring  += '\n'
 
     for i in range(len(board)):
-        outputstring += (str(i) + '|')
+        outputstring += (str(i)[-1] + '|')
         for j in board[i]:
             outputstring += j[0] if j else '-'
         outputstring += '\n'
@@ -77,8 +84,11 @@ def get_json_data(filename:str) -> dict:
 
     '''Reads a JSON file and returns the data for later use.
 
-    :param str filename: The name of the file to be accessed, with the extension intact.
-    :return dict data: The data contained in the JSON file in dictionary format.
+    :param filename: The name of the file to be accessed, with the extension intact.
+    :type filename: str
+
+    :return data: The data contained in the JSON file in dictionary format.
+    :type data: dict
 
     '''
     #Opens file and parses JSON data with the stdlib JSON module.
@@ -99,8 +109,11 @@ def initialise_board(size:int=10) -> list[list[str]]:
 
     '''Generates the board given a board size.
 
-    :param int size: The size of the board.
-    :return list board: The board as a list of n lists of size n.
+    :param size: The size of the board.
+    :type size: int (should be > 0)
+
+    :return: The board as a list of n lists of size n.
+    :rtype: list
 
     '''
     board = []
@@ -112,8 +125,11 @@ def create_battleships(filename:str='battleships.txt') -> dict[str,int]:
 
     '''Reads a file and copies the data into an array.
 
-    :param str filename: The name of the file to be accessed.
+    :param filename: The name of the file to be accessed.
+    :type filename: str
+
     :return: A dictionary with the ship name as the key and the length as the value.
+    :rtype: dict
 
     '''
     ships = {}
@@ -157,10 +173,17 @@ def place_battleships(board:list[list[str]], ships:dict[str,int],
 
     '''Populates a board with battleships
 
-    :param list board: the board as a list of lists.
-    :param dict ships: the ships to be placed.
-    :param str algorithm: the method of placement to be used.
+    :param board: the board as a list of lists.
+    :type board: list
+
+    :param ships: the ships to be placed.
+    :type ships: dict
+
+    :param algorithm: the method of placement to be used.
+    :type algorithm: str ("simple", "random", "custom" currently implemented.)
+
     :return: the updated board with ships placed.
+    :rtype: list
 
     '''
 
