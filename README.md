@@ -113,7 +113,11 @@ Windows:
 **python -m pip install pytest-depends**
 
 ## Documentation
-Documentation of each module can be found in the **/docs** folder of the root directory. These are automatically generated using [Sphinx](https://www.sphinx-doc.org/en/master/). To remake the documentation using sphinx:
+Documentation of each module can be found in the **/docs** folder of the root directory. These are automatically generated using [Sphinx](https://www.sphinx-doc.org/en/master/). 
+To open the documentation, navigate to **/docs/build/html/** and open **index.html** in a browser. In the future the documentation will be pushed to ReadTheDocs and this section will be updated accordingly.
+
+
+To remake the documentation using sphinx:
 
 -Install the **sphinx** and **autodoc** modules. To do this in the command line:
 
