@@ -18,9 +18,12 @@ This can be found at https://www.python.org/downloads/.
 -Install the **flask** and **flask_session** modules. These can be installed with the following commands on the terminal and are required to play the game with the web-based interface.
 
 GNU/Linux or MacOS:
+
 ***python3 pip install flask***
 ***python3 pip install flask_session***
+
 Windows:
+
 ***python -m pip install flask***
 ***python -m pip install flask_session***
 
@@ -29,9 +32,13 @@ To play through the command line interface:
 
 To do this through the command line:
 - Navigate to **/src** from the **root** directory.
+- 
 GNU/Linux or MacOS:
+
 ***python3 mp_game_engine.py***
+
 Windows:
+
 ***python mp_game_engine.py***
 
 To play through the web-based interface:
