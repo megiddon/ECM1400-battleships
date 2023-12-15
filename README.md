@@ -1,5 +1,7 @@
 # Battleships
+
 Copyright megiddon 2023
+
 Made for the ECM1400 Programming module.
 
 ## Features Implemented
