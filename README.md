@@ -19,7 +19,7 @@ This program is an implementation of the classic two-player game Battleships in 
 This can be found [here](https://www.python.org/downloads/.)
 
 **Optional:**
--Install the **flask** and **flask_session** modules. These can be installed with the following commands on the terminal and are required to play the game with the web-based interface.
+Install the **flask** and **flask-session** modules. These can be installed with the following commands on the terminal and are required to play the game with the web-based interface.
 
 GNU/Linux or MacOS:
 
