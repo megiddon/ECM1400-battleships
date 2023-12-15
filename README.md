@@ -15,7 +15,7 @@ This program is an implementation of the classic two-player game Battleships in 
 
 ## Getting Started
 -Ensure you have python 3.9 or newer installed.
-This can be found at https://www.python.org/downloads/.
+This can be found [here](https://www.python.org/downloads/.)
 
 **Optional:**
 -Install the **flask** and **flask_session** modules. These can be installed with the following commands on the terminal and are required to play the game with the web-based interface.
@@ -113,7 +113,7 @@ Windows:
 **python -m pip install pytest-depends**
 
 ## Documentation
-Documentation of each module can be found in the **/docs** folder of the root directory. These are automatically generated using (https://www.sphinx-doc.org/en/master/ "Sphinx"). To remake the documentation using sphinx:
+Documentation of each module can be found in the **/docs** folder of the root directory. These are automatically generated using [Sphinx](https://www.sphinx-doc.org/en/master/). To remake the documentation using sphinx:
 
 -Install the **sphinx** and **autodoc** modules. To do this in the command line:
 
@@ -141,13 +141,13 @@ To compile the documentation:
 
 GNU/Linux or MacOS:
 
-_Navivate to the **docs** folder in the command line and run **Makefile**
+Navivate to the **docs** folder in the command line and run **Makefile**
 
 Windows:
 
-_Navigate to the **docs** folder in the command line and run **make html**
+Navigate to the **docs** folder in the command line and run **make html**
 
-Note that the documentation is automatically generated based off the docstrings in each module. Docstrings must be structured in (https://peps.python.org/pep-0287/ reST)) format. More information on this can be found (https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html "here").
+Note that the documentation is automatically generated based off the docstrings in each module. Docstrings must be structured in (https://peps.python.org/pep-0287/ reST)) format. More information on this can be found [here](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html).
 
 ## License
 
