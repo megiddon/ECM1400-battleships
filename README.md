@@ -74,17 +74,18 @@ The game's difficulty as well as the size of the game board can be configured.
 - Open config.JSON in a text editor.
 To change the difficulty, replace "hard" with one of the following:
 
-**"easy"**:  The AI guesses randomly and does not sink ships that it has found.
+**"easy"**:  The AI guesses randomly and does not sink ships that it has found. The AI will guess squares that it has already attacked.
 
 **"medium"**: The AI guesses randomly, but if it finds a ship it will stop guessing randomly to sink that ship.
 
-**"hard"**:  As with Medium, but the AI guesses with polarity.
+**"hard"**:  As with Medium, but the AI guesses with polarity. The basis of this is that if the smallest battleship has length 2, then one only needs to search every other square in order to find it. 
 
-**"very hard"**: As with Hard, but the AI's guess is weighted based on the approximate probability that a ship could be in a particular square.
+**"very hard"**: As with Hard, but the AI's guess is weighted based on the approximate probability that a ship could be in a particular square. This works by counting the number of squares to each side of a ship in each direction, and checking how many ways there are to place a particular ship that would include that square. We assign a score to each square based on this and choose a square randomly based off of that. The results of this vary widely depending on the formula used to assign the score.
 
-**"extreme"**: As with Very Hard, but the polarity that the AI guesses with changes dynamically based on what ships have been sunk.
+**"extreme"**: As with Very Hard, but the polarity that the AI guesses with changes dynamically based on what ships have been sunk. The basis of this is that if the smallest battleship has length n, then we only need to search every nth square in order to find it.
 
-- To change the size of the board, replace the number **10** with a positive integer of your choice. Be aware that very large board sizes may not render in the web-based interface.
+To change the size of the board, replace the number **10** with a positive integer of your choice. Be aware that very large board sizes may not render in the web-based interface. Proceed at your own risk.
+  
 ## Testing
 
 In order to run the tests written for the application:
