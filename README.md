@@ -74,7 +74,7 @@ The game's difficulty as well as the size of the game board can be configured.
 - Open config.JSON in a text editor.
 To change the difficulty, replace "hard" with one of the following:
 
-**"easy"**:  The AI guesses randomly and does not sink ships that it has found. The AI will guess squares that it has already attacked.
+**"easy"**:  The AI guesses randomly and does not sink ships that it has found.
 
 **"medium"**: The AI guesses randomly, but if it finds a ship it will stop guessing randomly to sink that ship.
 
