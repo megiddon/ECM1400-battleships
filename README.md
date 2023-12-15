@@ -34,7 +34,7 @@ To play through the command line interface:
 
 To do this through the command line:
 - Navigate to **/src** from the **root** directory.
-- 
+  
 GNU/Linux or MacOS:
 
 ***python3 mp_game_engine.py***
@@ -48,7 +48,7 @@ To play through the web-based interface:
 
 To do this through the command line:
 - Navigate to **/src** from the **root** directory.
-- 
+  
 GNU/Linux or MacOS:
 
 ***python3 main.py***
@@ -83,9 +83,13 @@ To change the difficulty, replace "hard" with one of the following:
 In order to run the tests written for the application:
 - Navigate into the **/src** directory in the command line.
 - Enter the following:
+  
 - **GNU/Linux or MacOS** :
+  
 python3 -pytest
+
 - **Windows**:
+
 python -m pytest 
 
 The **pytest** and **pytest-depends** modules must be installed. To do this, open the terminal and enter the folllowing:
@@ -101,8 +105,8 @@ This program is licensed under the GNU GPL 3.0, which is contained in full in th
 
 
 ## Contact
-The source code for this project can be found at **https://github.com/megidderp/ECM1400-battleships.**
+The source code for this project can be found at **https://github.com/megiddon/ECM1400-battleships.**
 
-Issues should be raised at **https://github.com/megidderp/ECM1400-battleships/issues.**
+Issues should be raised at **https://github.com/megiddon/ECM1400-battleships/issues.**
 
-All other concerns should be directed to **megidderp@outlook.com**.
+All other concerns should be directed to **megiddon@outlook.com**.
