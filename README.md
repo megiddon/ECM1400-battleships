@@ -6,8 +6,8 @@ Made for the ECM1400 Programming module.
 
 ## Features Implemented
 - Core gameplay as detailed in specification
-- Adjustable difficulty implemented through config file
-- Adjustable board size implemented through config file
+- Adjustable difficulty implemented through config file. Set to "easy" by default, which is the basic behaviour given in the specification.
+- Adjustable board size implemented through config file. Size is set to 10 by default.
 - Series of unit tests written in test_custom.py
   
 ## Overview
