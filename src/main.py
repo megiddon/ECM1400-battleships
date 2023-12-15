@@ -12,6 +12,7 @@ import json
 import os
 import logging
 import sys
+from math import floor
 from uuid import uuid1
 
 try:
@@ -23,7 +24,7 @@ except ModuleNotFoundError:
     input('Press Enter to quit.')
     sys.exit()
 
-from mp_game_engine import generate_attack, generate_advanced_attack, advanced_ai_attack
+from mp_game_engine import generate_attack, generate_advanced_attack, advanced_ai_attack, validate_config_data
 from game_engine import attack, wintest
 from components import get_json_data, create_battleships, place_battleships, initialise_board, await_exit
 
@@ -88,23 +89,39 @@ def placement_interface():
         with open('placement.json', 'w') as file_2:
             json.dump(placement_data, file_2)
 
-        session['ai_checked'] = [(9001,9001)]
+        session['ai_checked'] = []
         logging.info('id %s: ship data successfully sent', session["ident"])
-        return jsonify({'message': 'all according to keikaku'}),1000
+        #Message is arbitrary here.
+        return jsonify({'message': 'just according to keikaku'}),1000
 
     if request.method == 'GET':
         config_data = get_json_data('config.json')
         if not config_data:
             config_data = {'difficulty':'hard', 'size':10}
 
+        session['difficulty'] : dict = config_data['difficulty']
+        session['size'] : int = config_data['size']
+
+        session['difficulty'], session['size'] = validate_config_data(
+            session['difficulty'], session['size'])
+
         #Generates a unique ID for a session for identification in the log.
         #Not cryptographically secure but it doesn't
         #Need to be for this particular application.
         session['ident'] = uuid1()
-        session['difficulty'] = config_data['difficulty']
-        session['size'] = config_data['size']
-        session['hunt'] = []
-        session['player_ships'] = create_battleships()
+        session['hunt'] : dict = []
+        session['player_ships'] : dict[str,int] = create_battleships()
+        session['player_hit'] : dict[tuple[int,int],bool] = {}
+
+
+        #We need to track whether the game is over or not because of a weird bug that I found.
+        #If the game ends and the player keeps clicking squares,
+        #When the game is reloaded by going to /placement again
+        #There'll be a ton of latency for some reason.
+        #Obviously we don't want this.
+        session['end_flag'] = False
+
+
         logging.info('id %s:attempting to load placement page', session["ident"])
         try:
             return render_template('placement.html',
@@ -123,70 +140,88 @@ def root():
     POST requests are not defined.
     '''
 
-    print(request.args)
+    if request.method == 'GET':
+
+        #Attempts to redirect to /main.
+        try:
+            logging.info('id %s: attempting to load main game', session["ident"])
+            return render_template('main.html',
+                                   player_board=session['player_board'])
+
+        except jinja2.exceptions.TemplateNotFound:
+            logging.critical('main.html does not exist!')
+
+@app.route('/attack', methods=['GET', 'POST'])
+def process_attack():
+
 
     if request.method == 'GET':
 
-        if str(request.args) == 'ImmutableMultiDict([])':
-            #Attempts to redirect to /main.
-            try:
-                logging.info('id %s: attempting to load main game', session["ident"])
-                return render_template('main.html',
-                                       player_board=session['player_board'])
+        if session['end_flag']:
+            return jsonify({})
 
-            except jinja2.exceptions.TemplateNotFound:
-                logging.critical('main.html does not exist!')
+        #Parses coordinates from client.
+        x_coord = int(request.args.get('x'))
+        y_coord = int(request.args.get('y'))
+
+        #Processes the attack.
+
+        #Checks if the square the player hits on has already been hit.
+        #Returns a dummy response if this is the case.
+        #This kept bugging me with the template so I fixed it.
+        if (x_coord, y_coord) in session['player_hit'].keys():
+            return jsonify({'hit' : session['player_hit'][(x_coord,y_coord)],
+                            'AI_Turn': session['ai_checked'][-1][::-1]})
+
+        hit = attack((x_coord,y_coord), session['ai_board'], session['aiships'])
+        session['player_hit'][(x_coord,y_coord)] = hit
+
+        if session['difficulty'] == 'easy':
+            while True:
+                ai_coords = generate_attack(session['size'])
+                if ai_coords not in session['ai_checked']:
+                    break
+            session['ai_checked'].append(ai_coords)
 
         else:
+            ai_coords, session['ai_checked'] = generate_advanced_attack(session['ai_checked'],
+                                                                       session['difficulty'],
+                                                                       session['hunt'],
+                                                                       session['player_ships'],
+                                                                       session['size'])
+        #If player wins.
+        if wintest(session['aiships']):
+            logging.info('game over - Player wins')
+            session['end_flag'] = True
 
-            #Parses coordinates from client.
-            x_coord = int(request.args.get('x'))
-            y_coord = int(request.args.get('y'))
+            return jsonify({'hit': True,
+                            'AI_Turn': ai_coords[::-1],
+                            'finished': 'you won!'})
+        else:
 
-            #Processes the attack.
-            hit = attack((x_coord,y_coord), session['ai_board'], session['aiships'])
-
+            #Difficulty implementation.
             if session['difficulty'] == 'easy':
-                ai_coords = generate_attack(session['size'])
+                attack(ai_coords,
+                            session['player_board'],
+                            session['player_ships'])
+
             else:
-                ai_coords, session['ai_checked'] = generate_advanced_attack(session['ai_checked'],
-                                                                           session['difficulty'],
-                                                                           session['hunt'],
-                                                                           session['player_ships'],
-                                                                           session['size'])
+                session['hunt'] = advanced_ai_attack(ai_coords,
+                                                            session['player_board'],
+                                                            session['player_ships'],
+                                                            session['hunt'],
+                                                            session['difficulty'])
 
-            #If player wins.
-            if wintest(session['aiships']):
-                logging.info('game over - Player wins')
-                return jsonify({'hit': True,
-                                'AI_Turn': ai_coords[::-1],
-                                'finished': 'you won!'})
-            else:
-
-                #Difficulty implementation.
-                if session['difficulty'] == 'easy':
-                    attack(ai_coords,
-                                session['player_board'],
-                                session['player_ships'])
-
-                else:
-                    session['hunt'] = advanced_ai_attack(ai_coords,
-                                                                session['player_board'],
-                                                                session['player_ships'],
-                                                                session['hunt'],
-                                                                session['difficulty'])
-
-            #If comp wins.
-            if wintest(session['player_ships']):
-                logging.info('id %s: game over - AI Wins', session["ident"])
-                return jsonify({'hit': hit,
-                                'AI_Turn': ai_coords[::-1],
-                                'finished': 'you lose!'})
-
+        #If comp wins.
+        if wintest(session['player_ships']):
+            session['end_flag'] = True
+            logging.info('id %s: game over - AI Wins', session["ident"])
             return jsonify({'hit': hit,
-                            'AI_Turn': ai_coords[::-1]})
-            
+                            'AI_Turn': ai_coords[::-1],
+                            'finished': 'you lose!'})
 
+        return jsonify({'hit': hit,
+                        'AI_Turn': ai_coords[::-1]})
 
 
 if __name__ == '__main__':
@@ -198,6 +233,7 @@ if __name__ == '__main__':
     #so if two browsers access the service at the same time,
     #The two aren't going to interfere with each other.
     #Dealing with global variables with a structure like this is painful.
+    #Luckily we have a nice solution that fixes all that.
 
     app.config.from_object(__name__)
     Session(app)
