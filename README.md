@@ -70,7 +70,7 @@ Windows:
 ## Changing Battleships
 
 The battleships in the game can be changed through the file **battleships.txt**
-- Open **battleships.txt** in a text editor.
+- Open **/src/battleships.txt** in a text editor.
 - Add a new line for each battleship.
 - Write to the line in the format **name**:**length**. For example, an Aircraft Carrier with length 5 would be written as **Aircraft_Carrier:5**, or a Nuclear Submarine with length 2 would be written as **Nuclear_Sumbarine:3**. Note that quotes are not required for the name of the ship or the length and underscores should be used to separate words.
 
@@ -78,8 +78,8 @@ The battleships in the game can be changed through the file **battleships.txt**
 
 The game's difficulty as well as the size of the game board can be configured.
 
-- Open config.JSON in a text editor.
-To change the difficulty, replace "hard" with one of the following:
+- Open **/src/config.JSON** in a text editor.
+To change the difficulty, replace "easy" with one of the following:
 
 **"easy"**:  The AI guesses randomly and does not sink ships that it has found.
 
