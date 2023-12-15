@@ -102,7 +102,7 @@ In order to run the tests written for the application:
   
 **GNU/Linux or MacOS** :
   
-python3 -pytest
+python3 pytest
 
 **Windows**:
 
@@ -167,11 +167,6 @@ Windows:
 Navigate to the **docs** folder in the command line and run **make html**
 
 Note that the documentation is automatically generated based off the docstrings in each module. Docstrings must be structured in [reST](https://peps.python.org/pep-0287) format. More information on this can be found [here](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html).
-
-
-## Known issues
-
-Running pytest seems to cause a test report file **test_report.txt** to be generated in multiple directories. This is most likely due to a scoping issue as the **/src** directory needs to be added to **sys.PATH** for pytest to run. Scoping in general 
 
 ## License
 
