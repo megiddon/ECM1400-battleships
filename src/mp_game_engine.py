@@ -21,6 +21,40 @@ logging.basicConfig(encoding='utf-8',
                     format='%(asctime)s %(levelname)-1s %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S')
 
+
+def validate_config_data(difficulty,size) -> (str, int):
+
+    '''Validates the data in config.json.
+
+    :param difficulty: the difficulty variable in config.json
+    :param size: the size variable in config.json
+
+    '''
+
+    #Checks that the size variable has a valid value.
+    try:
+        if size != floor(size) or size < 0:
+            logging.error('size variable in config.json invalid!')
+            size = 10
+    except TypeError:
+        logging.error('size variable in config.json invalid!')
+        size = 10
+
+
+    #Checks that the board is large enough for all ships to be placed.
+    max_ship_length = max(create_battleships().values())
+    if size < max_ship_length:
+        size = max_ship_length
+        logging.error("Specified board size cannot fit all ships!\
+                        A larger board will be used.")
+
+    #Checks that the difficulty is valid.
+    if difficulty.lower() not in ['easy','medium','hard','very hard','extreme']:
+        logging.error('difficulty variable in config.json invalid!')
+        difficulty = 'easy'
+
+    return difficulty,size
+
 def choose_advanced_square(ai_checked:list[tuple[int,int]],
                            ships:dict[str,int],
                            polarity:int,
@@ -28,12 +62,17 @@ def choose_advanced_square(ai_checked:list[tuple[int,int]],
 
     '''chooses a square based on the probability of the square being able to contain each ship.
 
-    :param list ai_checked: list of squares the ai has already attacked
-    :param dict ships: the player's ships
-    :param int polarity: the distance between squares that the ai can check
-    :param int size: the size of the board
+    :param ai_checked: list of squares the ai has already attacked
+    :type ai_checked: list
+    :param ships: the player's ships
+    :type ships: dict
+    :param polarity: the distance between squares that the ai can check
+    :type polarity: int
+    :param size: the size of the board
+    :type size: int
 
-    :return tuple: the square that the ai chooses
+    :return: the square that the ai chooses
+    :rtype: tuple
     '''
 
     DIRECTIONS = [(1,0), (-1,0), (0,1), (0,-1)]
@@ -69,11 +108,12 @@ def choose_advanced_square(ai_checked:list[tuple[int,int]],
                 #calculates score based on the number of free squares in each direction
                 horizontal_squares:int = squares[0] + squares[1] + 1
                 vertical_squares:int = squares[2] + squares[3] + 1
-                h_score:int = floor(horizontal_squares ** 1.5 / 4)
-                v_score:int = floor(vertical_squares ** 1.5 / 4)
+                h_score:int = floor(horizontal_squares ** 2/ 4)
+                v_score:int = floor(vertical_squares ** 2 / 4)
                 scores[i][j] = h_score + v_score + random.randint(5,7)
 
     #chooses square, but now factoring in the score for each square.
+
     total:int = sum(sum(scores, []))
     index:int = random.randint(0,total-1)
     cumulative = 0
@@ -92,14 +132,22 @@ def advanced_ai_attack(coords:tuple[int,int],
                        board:list[list[str]],
                        ships:dict[str,int],
                        hunt:list[dict[str,tuple[int,int],tuple[int,int],tuple[int,int]]],
-                       difficulty:[str]) -> dict:
+                       difficulty:[str]) -> list[dict[str,tuple[int,int],
+                                                      tuple[int,int],tuple[int,int]]]:
 
     '''Replaces the 'attack' function for the more advanced AI.
 
-    :param tuple coords: the square being attacked.
-    :param list board: the board being attacked.
-    :param dict ships: the ships of the player being attacked.
-    :param list hunt: the list of ships that have been found by the AI
+    :param coords: the square being attacked.
+    :type coords: tuple
+    :param board: the board being attacked.
+    :type board: list
+    :param ships: the ships of the player being attacked.
+    :type ships: dict
+    :param hunt: the list of ships that have been found by the AI
+    :type hunt: list
+
+    :return: the list of ships which have been found but not sunk
+    :rtype: list
 
     '''
 
@@ -116,7 +164,7 @@ def advanced_ai_attack(coords:tuple[int,int],
                 if hunt[0]['name'] == name:
 
                     #if the orientation has not been found
-                    if hunt[0]['orientation'] == (9001,9001):
+                    if hunt[0]['orientation'] == (0,0):
                         if abs(coords[0] - hunt[0]['lsquare'][0]) == 1:
                             hunt[0]['orientation'] = (1,0)
                         else:
@@ -141,7 +189,7 @@ def advanced_ai_attack(coords:tuple[int,int],
                     if index:
 
                         #if the ship's orientation has been found
-                        if hunt[index]['orientation'] != (9001,9001):
+                        if hunt[index]['orientation'] != (0,0):
                             if hunt[index]['lsquare'] - hunt[index]['orientation'][0] == coords:
                                 hunt[index]['lsquare'] = coords
                             elif hunt[index]['rsquare'] + hunt[index]['orientation'][1] == coords:
@@ -152,23 +200,23 @@ def advanced_ai_attack(coords:tuple[int,int],
                     #if the ship is a new ship
                     else:
                         hunt.append({'name':name, 'lsquare':coords,
-                                     'rsquare':coords, 'orientation':(9001,9001)})
+                                     'rsquare':coords, 'orientation':(0,0)})
 
             else:
                 hunt.append({'name':name, 'lsquare':coords,
-                             'rsquare':coords, 'orientation':(9001,9001)})
+                             'rsquare':coords, 'orientation':(0,0)})
 
     if name:
         ships[name] -= 1
         board[row][col] = None
-        print('Hit battleship at ' + str(col) + ',' + str(row))
+        print(f'AI hit battleship at ({col},{row})!')
         if ships[name] == 0:
             for i in hunt:
                 if ships[i['name']] == 0:
                     hunt.remove(i)
             print(f'{name} sunk!')
         return hunt
-    print('Miss!')
+    print(f'AI missed at ({col},{row})!')
     return hunt
 
 
@@ -180,10 +228,14 @@ def choose_square(ai_checked:list[tuple[int,int]],
     since the parameters for the generate_attack function are specified
     in the specification.
 
-    :param list ai_checked: the squares that the ai has already attacked.
-    :param int polarity: the polarity that the ai attacks with.
-    :param int size: the size of the board.
-    :return tuple: the square
+    :param ai_checked: the squares that the ai has already attacked.
+    :type ai_checked: list
+    :param polarity: the polarity that the ai attacks with.
+    :type polarity: int
+    :param size: the size of the board.
+    :type size: int
+    :return: the square chosen.
+    :rtype: tuple
 
     '''
     while True:
@@ -201,33 +253,44 @@ def generate_attack(size:int=10) -> tuple[int,int]:
 
     '''Chooses square randomly.
 
-    :param int size: the size of the board.
-    :return tuple new_square: the generated square.
+    :param size: the size of the board.
+    :type size: int
+    :return: the generated square.
+    :rtype: tuple
     '''
 
-    new_square = (random.randint(0,size), random.randint(0,size))
+    new_square = (random.randint(0,size-1), random.randint(0,size-1))
     return new_square
 
-def generate_advanced_attack(ai_checked
-                             , difficulty, hunt, ships, size):
+def generate_advanced_attack(ai_checked:list[tuple[int,int]],
+                             difficulty:str,
+                             hunt:list[dict[str,tuple[int,int],tuple[int,int],tuple[int,int]]],
+                             ships:dict[str,int],
+                             size:int):
 
     '''Replaces the 'generate_attack' function for the more advanced AI
 
-    :param list ai_checked: the list of squares that the AI has checked
-    :param str difficulty: the difficulty of the game
-    :param list hunt: the list of ships that the AI has found
-    :param list ships: the ships of the player being attacked
-    :param int size: the size of the board.
-    :return tuple new_square: the square generated by the AI
-    :return ai_checked: the list of squares that the AI has checked
+    :param ai_checked: the list of squares that the AI has checked
+    :type ai_checked: list
+    :param difficulty: the difficulty of the game
+    :type difficulty: string
+    :param hunt: the list of ships that the AI has found
+    :type hunt: list
+    :param ships: the ships of the player being attacked
+    :type ships: dict
+    :param size: the size of the board.
+    :type size: int
+    :return: the square generated by the AI, the list of squares that the AI has checked
+    :rtype: tuple, list
 
     '''
 
     DIRECTIONS = [(1,0), (-1,0), (0,1), (0,-1)]
 
+    #Loops until a good square is found.
     while True:
 
-        #if there is not a ship on the queue
+        #if there is not a ship on the queue.
         if not hunt:
             if difficulty == 'medium':
                 new_square = choose_square(ai_checked,1,size)
@@ -238,13 +301,13 @@ def generate_advanced_attack(ai_checked
             elif difficulty == 'extreme':
                 new_square = choose_advanced_square(ai_checked, ships,
                                                     max(min(ships.values()), 2),size)
-        #if there is a ship on the queue
+        #If there is a ship on the queue.
         else:
             direction_choice = random.choice([0,1])
 
 
-            #if the direction of the ship is known
-            if hunt[0]['orientation'] != (9001,9001):
+            #If the direction of the ship is known.
+            if hunt[0]['orientation'] != (0,0):
                 if direction_choice:
                     new_square = (hunt[0]['lsquare'][0] - hunt[0]['orientation'][0],
                                   hunt[0]['lsquare'][1] - hunt[0]['orientation'][1])
@@ -256,11 +319,11 @@ def generate_advanced_attack(ai_checked
                 new_square = (hunt[0]['lsquare'][0] + direction[0],
                               hunt[0]['lsquare'][1] + direction[1])
 
-        #if the square has already been checked
+        #If the square has already been checked.
         if new_square in ai_checked or not validate_square(new_square,size):
             pass
 
-        #if the square has not been checked
+        #If the square has not been checked.
         else:
             ai_checked.append(new_square)
             return new_square, ai_checked
@@ -273,8 +336,8 @@ def ai_opponent_game_loop() -> None:
     ai_checked = []
     if DIFFICULTY != 'easy':
         hunt = []
-    print('Welcome to Battleship!')
-    print('Opponent set to ' + DIFFICULTY + ' ai.')
+    print('Welcome to Battleships!')
+    print(f'Opponent set to {DIFFICULTY} AI.')
     player_name = input('Please enter your username. ')
 
     players[player_name] = {'board': initialise_board(BOARD_SIZE), 'ships': create_battleships()}
@@ -293,12 +356,15 @@ def ai_opponent_game_loop() -> None:
 
             #Checks if the player has won.
             if wintest(players['ai']['ships']):
-                print(player_name + ' wins! ')
+                print(f' {player_name} wins!')
                 break
 
             #Generates AI attack
             if DIFFICULTY == 'easy':
-                aicoords = generate_attack(BOARD_SIZE)
+                while True:
+                    aicoords = generate_attack(BOARD_SIZE)
+                    if aicoords not in ai_checked:
+                        break
             else:
                 aicoords, ai_checked = generate_advanced_attack(ai_checked,DIFFICULTY,
                                                                 hunt,players[player_name]['ships'],
@@ -307,6 +373,7 @@ def ai_opponent_game_loop() -> None:
             if DIFFICULTY == 'easy':
                 attack(aicoords,players[player_name]["board"],
                        players[player_name]["ships"])
+                ai_checked.append(aicoords)
             else:
                 hunt = advanced_ai_attack(aicoords,players[player_name]['board'],
                                           players[player_name]['ships'],hunt,DIFFICULTY)
@@ -319,24 +386,19 @@ def ai_opponent_game_loop() -> None:
 
 #Initialises game
 if __name__ == '__main__':
+
     players = {}
 
     #Obtains and validates config data from config.json file.
     config_data = get_json_data('config.json')
     if not config_data:
         config_data = {'size': 10, 'difficulty': 'hard'}
+    global BOARD_SIZE
     BOARD_SIZE = config_data['size']
-
-    try:
-        if BOARD_SIZE != floor(BOARD_SIZE) or BOARD_SIZE < 0:
-            logging.error('size variable in config.json invalid!')
-            BOARD_SIZE = 10
-    except TypeError:
-        logging.error('size variable in config.json invalid!')
-        BOARD_SIZE = 10
-
     DIFFICULTY = config_data['difficulty']
-    if DIFFICULTY.lower() not in ['easy','medium','hard','very hard','extreme']:
-        logging.error('difficulty variable in config.json invalid!')
-        DIFFICULTY = 'hard'
+    DIFFICULTY, BOARD_SIZE = validate_config_data(DIFFICULTY,BOARD_SIZE)
+
+
+
+
     ai_opponent_game_loop()
