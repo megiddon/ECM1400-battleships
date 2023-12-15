@@ -8,7 +8,8 @@ Made for the ECM1400 Programming module.
 - Core gameplay as detailed in specification
 - Adjustable difficulty implemented through config file. Set to "easy" by default, which is the basic behaviour given in the specification.
 - Adjustable board size implemented through config file. Size is set to 10 by default.
-- Series of unit tests written in test_custom.py
+- Various quality-of-life fixes for the flask code.
+- Series of unit tests written in test_custom.py.
   
 ## Overview
 This program is an implementation of the classic two-player game Battleships in python. The game can be played both in a command-line interface and a web-based interface built with the Flask module.
@@ -139,7 +140,7 @@ Windows:
 
 **sphinx-apidoc -o ./source ../src**
 
-This will generate new **.html** files fore each module created.
+This will generate new **.html** files for each module created.
 
 To compile the documentation:
 
