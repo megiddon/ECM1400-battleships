@@ -1,4 +1,4 @@
-#Copyright (C) 2023 Adam Pennington
+#Copyright (C) 2023 megidderp
 #This program is licensed under the GNU GPL 3.0 or later.
 #This is contained in full in the file LICENSE.txt
 
