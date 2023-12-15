@@ -99,11 +99,53 @@ python -m pytest
 The **pytest** and **pytest-depends** modules must be installed. To do this, open the terminal and enter the folllowing:
 
 GNU/Linux or MacOS:  
+
 _**python3 pip install pytest**
+
 _**python3 pip install pytest-depends**
+
 Windows:  
+
 _**python -m pip install pytest**
+
 _**python -m pip install pytest-depends**
+
+## Documentation
+Documentation of each module can be found in the **/docs** folder of the root directory. These are automatically generated using (https://www.sphinx-doc.org/en/master/ "Sphinx"). To remake the documentation using sphinx:
+
+-Install the **sphinx** and **sphinx-apidoc** modules. To do this in the command line:
+
+GNU/Linux or MacOS:
+
+_**python3 pip install sphinx**
+
+_**python3 pip install sphinx**
+
+Windows:
+
+_**python -m pip install sphinx**
+
+_**python -m pip install apidoc**
+
+-**Optional** - If you are forking this project, you should edit **conf.py** in the **docs** directory, which contains information about the project that is used to generate the documentation.
+
+_**Optional** - If you are adding new files to the program, you should navigate to the **docs** folder in the command line and run the following:
+
+**sphinx-apidoc -o ./source ../src**
+
+This will generate new **.html** files fore each module created.
+
+To compile the documentation:
+
+GNU/Linux or MacOS:
+
+_Navivate to the **docs** folder in the command line and run **Makefile**
+
+Windows:
+
+_Navigate to the **docs** folder in the command line and run **make html**
+
+Note that the documentation is automatically generated based off the docstrings in each module. Docstrings must be structured in (https://peps.python.org/pep-0287/ reST)) format. More information on this can be found (https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html "here").
 
 ## License
 
