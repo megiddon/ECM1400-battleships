@@ -3,10 +3,10 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "battleships-megidderp"
+name = "battleships-megiddon"
 version = "0.0.1"
 authors = [
-  { name="megidderp", email="megidderp@outlook.com" },
+  { name="megidderp", email="megiddon@outlook.com" },
 ]
 description = "An implementation of Battleships in Python with a web-based interface."
 readme = "README.md"
@@ -18,8 +18,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/megidderp/battleships"
-Issues = "https://github.com/megidderp/battleships/issues"
+Homepage = "https://github.com/megiddon/battleships"
+Issues = "https://github.com/megiddon/battleships/issues"
 
 [tool.pytest.ini_options]
 addopts = [
