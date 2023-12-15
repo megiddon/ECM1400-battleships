@@ -4,9 +4,10 @@ Made for the ECM1400 Programming module.
 
 ## Features Implemented
 - Core gameplay as detailed in specification
-- Adjustable difficulty implemented through config.py
+- Adjustable difficulty implemented through config file
+- Adjustable board size implemented through config file
 - Series of unit tests written in test_custom.py
-
+  
 ## Overview
 This program is an implementation of the classic two-player game Battleships in python. The game can be played both in a command-line interface and a web-based interface built with the Flask module.
 
